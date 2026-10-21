@@ -1,0 +1,13 @@
+name: RTL smoke test
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  iverilog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Check UART RTL
+        run: make smoke

@@ -1,0 +1,13 @@
+build/
+work/
+csrc/
+*.vcd
+*.wlf
+*.ucdb
+*.vdb/
+*.log
+*.vvp
+transcript
+simv*
+DVEfiles/
+coverage.txt
